@@ -20,7 +20,7 @@ jobs:
             - name: checkout the repo
               uses: actions/checkout@v4
             - name: login to ghcr.io
-              run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login -u ${{ github.actor }} --password-stdin ${{ env.GITHUB_REGISTRY }}
+              run: echo "${{ secrets.TOKEN }}" | docker login -u ${{ github.actor }} --password-stdin ${{ env.GITHUB_REGISTRY }}
               # uses: docker/login-action@v3
               # with:
               #   registry: ${{ env.GITHUB_REGISTRY }}
